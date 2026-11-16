@@ -1,0 +1,15 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <img src="{{$product->img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{$product->name}}</h5>
+            <p class="card-text">{{$product->price}} рублей</p>
+            <p class="card-text">{{$product->description}}</p>
+        </div>
+    </div>
+</div>
+@endsection
+

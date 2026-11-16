@@ -1,0 +1,23 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+  <a href="#" class="btn btn-primary">Создать товар</a>
+  <div class="row justify-content-center">
+    @foreach($product as $item)
+      <div class="d-flex justify-content-center align-content-center" style="width: 50rem; height: 20rem; border: 1px solid grey; border-radius: 10px; margin: 10px">
+        <img src="{{$item->img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{$item->name}}</h5>
+          <p class="card-text">{{$item->price}} рублей</p>
+          <p class="card-text">{{$item->description}}</p>
+          <a href="{{route('product', $item->id_product)}}" class="btn btn-primary">Перейти</a>
+          <a href="#" class="btn btn-primary">Обновить</a>
+          <a href="#" class="btn btn-primary">Удалить</a>
+        </div>
+      </div>
+    @endforeach
+</div>
+
+
+@endsection
